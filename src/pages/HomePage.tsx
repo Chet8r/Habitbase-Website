@@ -47,7 +47,7 @@ export function HomePage() {
           </h1>
 
           <p className="hero-sub">
-            Most apps track streaks. HabitBase tracks real progress — from Struggling all the way to Flow. Science-backed, beautifully simple.
+            Most apps track streaks. HabitBase tracks real progress, from Struggling all the way to Flow. Science-backed, beautifully simple.
           </p>
 
           <div className="hero-actions">
@@ -85,7 +85,7 @@ export function HomePage() {
           <div className="feature-copy">
             <p className="eyebrow">The Journey</p>
             <h2>From Struggling<br />to Flow.</h2>
-            <p>Every habit starts at Struggling. Check in consistently and you'll climb through levels — Consistency, Momentum, Habit, Mastery, and finally Flow.</p>
+            <p>Every habit starts at Struggling. Check in consistently and you'll climb through levels: Consistency, Momentum, Habit, Mastery, and finally Flow.</p>
             <p>The score system rewards showing up and penalises missing days, so your progress reflects reality, not just a streak counter that resets to zero.</p>
             <ul className="feature-list">
               <li><span className="check">✓</span> 10-level progression path</li>
@@ -106,7 +106,7 @@ export function HomePage() {
           <div className="feature-copy">
             <p className="eyebrow">Daily Tracking</p>
             <h2>Everything due today,<br />nothing more.</h2>
-            <p>Your habit list shows only what matters right now — today's habits, their current stage, and your progress bar. Clean, focused, zero clutter.</p>
+            <p>Your habit list shows only what matters right now: today's habits, their current stage, and your progress bar. Clean, focused, zero clutter.</p>
             <p>Complete a habit with a tap. Undo it in seconds. Every check-in is recorded and feeds into your stats and progression score.</p>
             <ul className="feature-list">
               <li><span className="check">✓</span> Due / Today / All filters</li>
@@ -127,7 +127,7 @@ export function HomePage() {
           <div className="feature-copy">
             <p className="eyebrow">HabitTap NFC</p>
             <h2>Tap your phone.<br />Habit done.</h2>
-            <p>Link any NFC tag to a habit. Tap your phone to the tag and it's instantly marked complete — no unlocking, no opening the app, no scrolling.</p>
+            <p>Link any NFC tag to a habit. Tap your phone to the tag and it's instantly marked complete, with no unlocking, no opening the app, and no scrolling.</p>
             <p>Put a tag on your gym bag, bedside table, desk, or front door. The tag stores an ID, not your data. Multiple people can use the same tag for different habits.</p>
             <ul className="feature-list">
               <li><span className="check">✓</span> Works with any NFC sticker or tag</li>
@@ -148,7 +148,7 @@ export function HomePage() {
           <div className="feature-copy">
             <p className="eyebrow">Stats & Insights</p>
             <h2>See what's working.<br />Fix what isn't.</h2>
-            <p>Your strongest habits, your struggling ones, completion rates, best days, and trends over weeks, months, and years — all in one place.</p>
+            <p>Your strongest habits, your struggling ones, completion rates, best days, and trends over weeks, months, and years, all in one place.</p>
             <p>The calendar view shows every completed day at a glance. Micro-insights surface patterns you wouldn't notice on your own.</p>
             <ul className="feature-list">
               <li><span className="check">✓</span> Weekly, monthly, yearly views</li>
@@ -169,7 +169,7 @@ export function HomePage() {
           <div className="feature-copy">
             <p className="eyebrow">Habit Detail</p>
             <h2>Every day.<br />Every check-in.</h2>
-            <p>Tap any habit to see its full history — a calendar of every completed day, current and longest streaks, sessions this month and year, and your reminder settings.</p>
+            <p>Tap any habit to see its full history: a calendar of every completed day, current and longest streaks, sessions this month and year, and your reminder settings.</p>
             <p>iCloud backup keeps your data safe and synced across all your devices. Restore automatically when you switch phones or reinstall.</p>
             <ul className="feature-list">
               <li><span className="check">✓</span> Full completion calendar</li>

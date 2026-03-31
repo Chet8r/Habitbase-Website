@@ -4,7 +4,7 @@ const sections = [
   {
     title: 'Data Stored on Your Device',
     paragraphs: [
-      'All habit data you create — including habit names, schedules, check-in history, reminders, progress levels, NFC tag links, activity events, and archived or deleted habits — is stored locally on your device using on-device storage. This data never leaves your device except through iCloud backup, which is optional and described below.',
+      'All habit data you create, including habit names, schedules, check-in history, reminders, progress levels, NFC tag links, activity events, and archived or deleted habits, is stored locally on your device using on-device storage. This data never leaves your device except through iCloud backup, which is optional and described below.',
       'HabitBase does not require an account to use the app.',
     ],
   },
