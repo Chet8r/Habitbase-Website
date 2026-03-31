@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HabitBase</title>
+    <script>
+      const segmentCount = 1
+      const { pathname, search, hash } = window.location
+      const prefix = pathname
+        .split('/')
+        .slice(0, 1 + segmentCount)
+        .join('/')
+      const remainder = pathname
+        .slice(prefix.length)
+        .replace(/^\/+/, '')
+        .replace(/&/g, '~and~')
+      const query = remainder ? `/?/${remainder}` : '/'
+      window.location.replace(
+        `${prefix}${query}${search.replace(/^\?/, '&')}${hash}`,
+      )
+    </script>
+  </head>
+  <body></body>
+</html>
