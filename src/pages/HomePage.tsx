@@ -60,7 +60,7 @@ export function HomePage() {
               <AppStoreIcon />
               Download on the App Store
             </a>
-            <span className="hero-legal">Free · Premium from £2.49/mo</span>
+            <span className="hero-legal">Free · Premium from £2.99/mo</span>
           </div>
         </div>
 
@@ -209,7 +209,7 @@ export function HomePage() {
               <div className="pricing-card-header">
                 <span className="pricing-tier">Pro</span>
                 <div>
-                  <span className="pricing-price">£2.49</span>
+                  <span className="pricing-price">£2.99</span>
                   <span className="pricing-per">/month</span>
                 </div>
               </div>
@@ -221,9 +221,9 @@ export function HomePage() {
                 <li>iCloud backup & sync</li>
               </ul>
               <div className="pricing-alts">
-                <span>£14.99 / year</span>
+                <span>£17.99 / year</span>
                 <span>·</span>
-                <span>£29.99 lifetime</span>
+                <span>£44.99 lifetime</span>
               </div>
             </div>
           </div>

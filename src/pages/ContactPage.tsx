@@ -2,34 +2,33 @@ import { Link } from 'react-router-dom'
 
 export function ContactPage() {
   return (
-    <main className="inner-page">
+    <main className="inner-page contact-page">
       <Link to="/" className="back-link">
         ← Back
       </Link>
 
-      <h1>Contact</h1>
-      <p className="page-meta">Support, privacy questions, or general feedback.</p>
-
-      <p style={{ fontSize: 14, color: '#777', lineHeight: 1.8 }}>
-        HabitBase is a one-person project. Reach out directly — I read every message.
-      </p>
-
-      <div className="contact-block">
-        <div className="contact-item">
-          <div className="contact-item-label">Email</div>
-          <a href="mailto:Chet8r@gmail.com">Chet8r@gmail.com</a>
+      <section className="contact-hero">
+        <div className="contact-hero-copy">
+          <p className="eyebrow">Contact</p>
+          <h1>Get in touch</h1>
+          <p className="contact-lead">
+            For support, privacy questions, or general feedback, use the details below.
+            Messages are read directly and replied to as soon as possible.
+          </p>
         </div>
-        <div className="contact-item">
-          <div className="contact-item-label">GitHub</div>
-          <a
-            href="https://github.com/Chet8r/Habitbase-Website"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/Chet8r/Habitbase-Website
+      </section>
+
+      <section className="contact-grid" aria-label="Contact details">
+        <article className="contact-inline">
+          <div className="contact-card-label">Email</div>
+          <a className="contact-card-link" href="mailto:Chet8r@gmail.com">
+            Chet8r@gmail.com
           </a>
-        </div>
-      </div>
+          <p className="contact-card-note">
+            Best for support requests, privacy questions, and general enquiries.
+          </p>
+        </article>
+      </section>
     </main>
   )
 }
