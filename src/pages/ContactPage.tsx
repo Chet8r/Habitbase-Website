@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export function ContactPage() {
   return (
@@ -7,28 +7,16 @@ export function ContactPage() {
         ← Back
       </Link>
 
-      <section className="contact-hero">
-        <div className="contact-hero-copy">
-          <p className="eyebrow">Contact</p>
-          <h1>Get in touch</h1>
-          <p className="contact-lead">
-            For support, privacy questions, or general feedback, use the details below.
-            Messages are read directly and replied to as soon as possible.
-          </p>
-        </div>
-      </section>
+      <h1>Contact</h1>
+      <p className="contact-copy">
+        For support, privacy questions, or general enquiries, email:
+      </p>
 
-      <section className="contact-grid" aria-label="Contact details">
-        <article className="contact-inline">
-          <div className="contact-card-label">Email</div>
-          <a className="contact-card-link" href="mailto:Chet8r@gmail.com">
-            Chet8r@gmail.com
-          </a>
-          <p className="contact-card-note">
-            Best for support requests, privacy questions, and general enquiries.
-          </p>
-        </article>
-      </section>
+      <p>
+        <a className="contact-email" href="mailto:Chet8r@gmail.com">
+          Chet8r@gmail.com
+        </a>
+      </p>
     </main>
-  )
+  );
 }

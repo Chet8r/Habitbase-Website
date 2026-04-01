@@ -510,7 +510,15 @@ html, body {
 .page-meta {
   font-size: 13px;
   color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.policy-intro {
   margin-bottom: 40px;
+}
+
+.policy-intro p:last-child {
+  margin-bottom: 0;
 }
 
 .inner-page h2 {
@@ -562,63 +570,26 @@ html, body {
 }
 
 .contact-page {
-  max-width: 760px;
+  max-width: 660px;
 }
 
-.contact-hero {
-  display: block;
-  margin-bottom: 36px;
-}
-
-.contact-hero-copy h1 {
+.contact-copy {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.8;
   margin-bottom: 12px;
 }
 
-.contact-lead {
-  max-width: 620px;
-  font-size: 15px;
-  color: var(--text2);
-  line-height: 1.8;
-}
-
-.contact-card-label {
-  font-size: 12px;
+.contact-email {
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-.contact-inline {
-  padding: 0;
-}
-
-.contact-card-link {
-  display: inline-block;
-  margin-top: 14px;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.4;
   color: var(--text);
   text-decoration: none;
 }
 
-.contact-card-link:hover {
+.contact-email:hover {
   color: var(--text);
   text-decoration: underline;
-}
-
-.contact-card-note {
-  margin-top: 12px;
-  font-size: 14px;
-  color: var(--text2);
-  line-height: 1.7;
 }
 
 /* ─── Responsive ─────────────────────────── */
