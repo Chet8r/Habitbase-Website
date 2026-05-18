@@ -86,7 +86,7 @@ export function PrivacyPage() {
 
       <h1>Privacy Policy</h1>
       <div className="policy-intro">
-        <p className="page-meta">Last updated: March 31, 2026</p>
+        <p className="page-meta">Last updated: May 18, 2026</p>
 
         <p>
           HabitBase is built and maintained by Chetan Rajesh. This policy
