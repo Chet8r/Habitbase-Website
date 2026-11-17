@@ -1,31 +1,23 @@
 import { useState } from "react";
-import {
-  LEVELS,
-  LEVEL_COLOR,
-  FREQ_SHORT,
-  progression,
-  fmtDays,
-  type Difficulty,
-} from "../utils/progression";
 import { Lightbox } from "../components/Lightbox";
-import appIcon from "../assets/App Icon.png";
-import screenLevels from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 20.34.39.png";
-import screenStartSmall from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 16.45.17.png";
-import screenHome from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 16.41.27.png";
-import screenDetail from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 16.48.31.png";
-import screenTimebox from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 14.44.46.png";
-import screenAllDone from "../assets/Simulator App Screens/img2.png";
-import screenCircle from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 16.35.04.png";
-import screenConsistencyCup from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 15.11.42.png";
-import screenStepCup from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 15.30.32.png";
-import appStore1 from "../assets/AppStore  App Screenshots/01.png";
-import appStore2 from "../assets/AppStore  App Screenshots/02.png";
-import appStore3 from "../assets/AppStore  App Screenshots/03.png";
-import appStore4 from "../assets/AppStore  App Screenshots/04.png";
-import appStore5 from "../assets/AppStore  App Screenshots/05.png";
-import appStore6 from "../assets/AppStore  App Screenshots/06.png";
-import appStore7 from "../assets/AppStore  App Screenshots/07.png";
-import appStore8 from "../assets/AppStore  App Screenshots/08.png";
+import appIcon from "../assets/App Icon.png?icon";
+import screenLevels from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 20.34.39.png?screenshot";
+import screenStartSmall from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 16.45.17.png?screenshot";
+import screenHome from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 16.41.27.png?screenshot";
+import screenDetail from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 16.48.31.png?screenshot";
+import screenTimebox from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 14.44.46.png?screenshot";
+import screenAllDone from "../assets/Simulator App Screens/img2.png?screenshot";
+import screenCircle from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 16.35.04.png?screenshot";
+import screenConsistencyCup from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 15.11.42.png?screenshot";
+import screenStepCup from "../assets/Simulator App Screens/Screenshot iPhone 17 Pro 16-11-2026 at 15.30.32.png?screenshot";
+import appStore1 from "../assets/AppStore  App Screenshots/01.png?screenshot";
+import appStore2 from "../assets/AppStore  App Screenshots/02.png?screenshot";
+import appStore3 from "../assets/AppStore  App Screenshots/03.png?screenshot";
+import appStore4 from "../assets/AppStore  App Screenshots/04.png?screenshot";
+import appStore5 from "../assets/AppStore  App Screenshots/05.png?screenshot";
+import appStore6 from "../assets/AppStore  App Screenshots/06.png?screenshot";
+import appStore7 from "../assets/AppStore  App Screenshots/07.png?screenshot";
+import appStore8 from "../assets/AppStore  App Screenshots/08.png?screenshot";
 
 function AppStoreIcon() {
   return (
@@ -36,11 +28,11 @@ function AppStoreIcon() {
 }
 
 function PhoneFrame({
-  src,
+  image,
   alt,
   onOpen,
 }: {
-  src: string;
+  image: ResponsiveImage;
   alt: string;
   onOpen: () => void;
 }) {
@@ -51,44 +43,46 @@ function PhoneFrame({
       onClick={onOpen}
       aria-label={`Enlarge: ${alt}`}
     >
-      <img src={src} alt={alt} className="phone-screen-img" loading="lazy" />
+      <img
+        src={image.src}
+        srcSet={image.srcset}
+        sizes="(max-width: 860px) 200px, 240px"
+        width={image.w}
+        height={image.h}
+        alt={alt}
+        className="phone-screen-img"
+        loading="lazy"
+      />
     </button>
   );
 }
 
 export function HomePage() {
-  const [progDiff, setProgDiff] = useState<Difficulty>("simple");
-  const progRows = LEVELS.map((lv) => ({
-    lv,
-    cells: [1, 2, 3, 4, 5, 6, 7].map((f) => {
-      const d = progression(progDiff, f);
-      return d.levels.find((e) => e.lv === lv)!;
-    }),
-  }));
-  const progTotals = [1, 2, 3, 4, 5, 6, 7].map((f) => progression(progDiff, f));
-
   const heroImages = [
-    { src: appStore1, alt: "8 levels, from Struggling to Flow" },
-    { src: appStore2, alt: "Start small, scale later" },
-    { src: appStore3, alt: "One slip won't undo you" },
-    { src: appStore4, alt: "Compete with friends in a Consistency Cup" },
-    { src: appStore5, alt: "Every habit, one clean screen" },
-    { src: appStore6, alt: "Timebox your day" },
-    { src: appStore7, alt: "Race your friends in a Step Cup" },
-    { src: appStore8, alt: "Share your wins with your Circle" },
+    { image: appStore1, alt: "8 levels, from Struggling to Flow" },
+    { image: appStore2, alt: "Start small, scale later" },
+    { image: appStore3, alt: "One slip won't undo you" },
+    { image: appStore4, alt: "Compete with friends in a Consistency Cup" },
+    { image: appStore5, alt: "Every habit, one clean screen" },
+    { image: appStore6, alt: "Timebox your day" },
+    { image: appStore7, alt: "Race your friends in a Step Cup" },
+    { image: appStore8, alt: "Share your wins with your Circle" },
   ];
   const featureImages = [
-    { src: screenLevels, alt: "The 8 levels, from Struggling to Flow" },
-    { src: screenStartSmall, alt: "Choosing a smaller version of a habit" },
-    { src: screenHome, alt: "HabitBase daily habit list" },
-    { src: screenDetail, alt: "Habit detail with slip buffer and calendar" },
-    { src: screenTimebox, alt: "Timebox day planner" },
-    { src: screenAllDone, alt: "All-done card with today's habits" },
-    { src: screenCircle, alt: "Milestone post in the Circle feed" },
-    { src: screenConsistencyCup, alt: "Consistency Cup podium" },
-    { src: screenStepCup, alt: "Step Cup daily race" },
+    { image: screenLevels, alt: "The 8 levels, from Struggling to Flow" },
+    { image: screenStartSmall, alt: "Choosing a smaller version of a habit" },
+    { image: screenHome, alt: "HabitBase daily habit list" },
+    { image: screenDetail, alt: "Habit detail with slip buffer and calendar" },
+    { image: screenTimebox, alt: "Timebox day planner" },
+    { image: screenAllDone, alt: "All-done card with today's habits" },
+    { image: screenCircle, alt: "Milestone post in the Circle feed" },
+    { image: screenConsistencyCup, alt: "Consistency Cup podium" },
+    { image: screenStepCup, alt: "Step Cup daily race" },
   ];
-  const lightboxImages = [...heroImages, ...featureImages];
+  const lightboxImages = [...heroImages, ...featureImages].map(({ image, alt }) => ({
+    src: image.src,
+    alt,
+  }));
   const featureOffset = heroImages.length;
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
 
@@ -100,7 +94,7 @@ export function HomePage() {
 
         <div className="hero-top">
           <div className="hero-identity">
-            <img src={appIcon} alt="HabitBase" className="app-icon" />
+            <img src={appIcon} alt="HabitBase" className="app-icon" width={56} height={56} />
             <div className="hero-identity-text">
               <span className="hero-app-name">HabitBase</span>
               <span className="hero-app-sub">Habit Tracker</span>
@@ -138,7 +132,14 @@ export function HomePage() {
               onClick={() => setLightboxIdx(i)}
               aria-label={`Enlarge: ${s.alt}`}
             >
-              <img src={s.src} alt={s.alt} />
+              <img
+                src={s.image.src}
+                srcSet={s.image.srcset}
+                sizes="(max-width: 860px) 136px, 141px"
+                width={s.image.w}
+                height={s.image.h}
+                alt={s.alt}
+              />
             </button>
           ))}
         </div>
@@ -161,7 +162,7 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenLevels}
+              image={screenLevels}
               alt="The 8 levels, from Struggling to Flow"
               onOpen={() => setLightboxIdx(featureOffset + 0)}
             />
@@ -186,7 +187,7 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenStartSmall}
+              image={screenStartSmall}
               alt="Choosing a smaller version of a habit"
               onOpen={() => setLightboxIdx(featureOffset + 1)}
             />
@@ -211,7 +212,7 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenHome}
+              image={screenHome}
               alt="HabitBase daily habit list"
               onOpen={() => setLightboxIdx(featureOffset + 2)}
             />
@@ -236,7 +237,7 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenDetail}
+              image={screenDetail}
               alt="Habit detail with slip buffer and calendar"
               onOpen={() => setLightboxIdx(featureOffset + 3)}
             />
@@ -261,7 +262,7 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenTimebox}
+              image={screenTimebox}
               alt="Timebox day planner"
               onOpen={() => setLightboxIdx(featureOffset + 4)}
             />
@@ -286,7 +287,7 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenAllDone}
+              image={screenAllDone}
               alt="All-done card with today's habits"
               onOpen={() => setLightboxIdx(featureOffset + 5)}
             />
@@ -311,7 +312,7 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenCircle}
+              image={screenCircle}
               alt="Milestone post in the Circle feed"
               onOpen={() => setLightboxIdx(featureOffset + 6)}
             />
@@ -336,7 +337,7 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenConsistencyCup}
+              image={screenConsistencyCup}
               alt="Consistency Cup podium"
               onOpen={() => setLightboxIdx(featureOffset + 7)}
             />
@@ -361,86 +362,11 @@ export function HomePage() {
           </div>
           <div className="feature-visual">
             <PhoneFrame
-              src={screenStepCup}
+              image={screenStepCup}
               alt="Step Cup daily race"
               onOpen={() => setLightboxIdx(featureOffset + 8)}
             />
           </div>
-        </div>
-      </section>
-
-      {/* ── PROGRESSION REFERENCE ── */}
-      <section className="prog-section">
-        <div className="prog-inner">
-          <p className="eyebrow" style={{ textAlign: "center" }}>The numbers</p>
-          <h2 className="prog-headline">What does it take to reach each level?</h2>
-          <p className="prog-sub">
-            Every habit climbs 8 levels on its way to Flow. The table below shows how many successful check-ins it takes to move from one level to the next.
-          </p>
-
-          <div className="prog-toggle" role="tablist" aria-label="Difficulty">
-            {(["simple", "moderate", "complex"] as Difficulty[]).map((d) => (
-              <button
-                key={d}
-                role="tab"
-                aria-selected={progDiff === d}
-                className={`prog-toggle-pill ${progDiff === d ? "is-active" : ""}`}
-                onClick={() => setProgDiff(d)}
-              >
-                {d.charAt(0).toUpperCase() + d.slice(1)}
-              </button>
-            ))}
-          </div>
-
-          <div className="prog-table-wrap">
-            <table className="prog-table">
-              <thead>
-                <tr>
-                  <th className="prog-th-level">Level</th>
-                  {[1, 2, 3, 4, 5, 6, 7].map((f) => (
-                    <th key={f}>{FREQ_SHORT[f]}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {progRows.map(({ lv, cells }) => (
-                  <tr
-                    key={lv}
-                    className={
-                      lv === "Habit" ? "prog-milestone prog-milestone--habit" : ""
-                    }
-                  >
-                    <td className="prog-td-level">
-                      <span
-                        className="prog-dot"
-                        style={{ background: LEVEL_COLOR[lv] }}
-                        aria-hidden
-                      />
-                      {lv}
-                    </td>
-                    {cells.map((entry, i) => (
-                      <td key={i} className="prog-td-num">
-                        {entry.needed > 0 ? entry.needed : "—"}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-                <tr className="prog-total">
-                  <td className="prog-td-level">Total to Flow</td>
-                  {progTotals.map((d, i) => (
-                    <td key={i} className="prog-td-num">
-                      <span className="prog-total-checks">{d.totalChecks}</span>
-                      <span className="prog-total-time">{fmtDays(d.totalDays)}</span>
-                    </td>
-                  ))}
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p className="prog-footnote">
-            Pick your difficulty. Each column is a different schedule, from once a week up to daily. The bottom row shows the total check-ins to reach Flow and roughly how long that takes in real time.
-          </p>
         </div>
       </section>
 

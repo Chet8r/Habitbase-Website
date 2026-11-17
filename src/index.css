@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -22,7 +20,7 @@
 html, body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter Variable', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -379,166 +377,6 @@ button.phone-frame--clickable:focus-visible {
 }
 
 /* ─── Pricing ────────────────────────────── */
-
-.prog-section {
-  padding: 96px 40px;
-  background: var(--bg);
-  border-top: 1px solid var(--border);
-}
-
-.prog-inner {
-  max-width: 980px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.prog-headline {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  margin-bottom: 12px;
-}
-
-.prog-sub {
-  font-size: 15px;
-  color: var(--text2);
-  max-width: 640px;
-  margin-bottom: 28px;
-}
-
-.prog-toggle {
-  display: inline-flex;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 4px;
-  gap: 2px;
-  margin-bottom: 32px;
-}
-
-.prog-toggle-pill {
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text2);
-  background: transparent;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: color 0.15s, background 0.15s;
-}
-
-.prog-toggle-pill:hover { color: var(--text); }
-
-.prog-toggle-pill.is-active {
-  background: var(--surface);
-  color: var(--accent);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
-
-.prog-table-wrap {
-  width: 100%;
-  overflow-x: auto;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 8px;
-}
-
-.prog-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  min-width: 580px;
-}
-
-.prog-table thead th {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  text-align: center;
-  padding: 12px 8px;
-  border-bottom: 1px solid var(--border);
-}
-
-.prog-table thead th.prog-th-level {
-  text-align: left;
-  padding-left: 16px;
-}
-
-.prog-table tbody td {
-  padding: 11px 8px;
-  text-align: center;
-  color: var(--text);
-  font-weight: 600;
-  border-bottom: 1px solid var(--border);
-}
-
-.prog-table tbody tr:last-child td { border-bottom: none; }
-
-.prog-table tbody td.prog-td-level {
-  text-align: left;
-  padding-left: 16px;
-  font-weight: 500;
-  color: var(--text2);
-  white-space: nowrap;
-}
-
-.prog-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  display: inline-block;
-  flex-shrink: 0;
-  margin-right: 10px;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-}
-
-.prog-table tr.prog-milestone td {
-  font-weight: 700;
-}
-
-.prog-table tr.prog-milestone td.prog-td-level {
-  color: var(--text);
-}
-
-.prog-table tr.prog-milestone--habit td {
-  background: rgba(34, 197, 94, 0.08);
-}
-
-.prog-table tr.prog-total td {
-  background: var(--accent-light);
-  font-weight: 700;
-  color: var(--text);
-}
-
-.prog-table tr.prog-total td.prog-td-level { color: var(--accent); }
-
-.prog-total-checks { display: block; }
-.prog-total-time {
-  display: block;
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--text2);
-  margin-top: 2px;
-}
-
-.prog-footnote {
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: 24px;
-  max-width: 640px;
-  line-height: 1.6;
-}
 
 .roadmap-section {
   padding: 96px 40px;
@@ -910,8 +748,6 @@ button.phone-frame--clickable:focus-visible {
   .feature-visual { order: -1; }
 
   .feature-visual .phone-frame { width: 200px; }
-
-  .prog-section { padding: 64px 24px; }
 
   .roadmap-section { padding: 64px 24px; }
 

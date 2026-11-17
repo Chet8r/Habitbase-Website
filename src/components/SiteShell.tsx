@@ -1,6 +1,11 @@
-import { Link, Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Link, Outlet, useLocation } from 'react-router-dom'
+import { syncHead } from '../seo'
 
 export function SiteShell() {
+  const { pathname } = useLocation()
+  useEffect(() => syncHead(pathname), [pathname])
+
   return (
     <div className="page-wrapper">
       <Outlet />

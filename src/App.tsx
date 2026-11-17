@@ -1,7 +1,8 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { SiteShell } from './components/SiteShell'
 import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
+import { NotFoundPage } from './pages/NotFoundPage'
 import { PrivacyPage } from './pages/PrivacyPage'
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="privacy" element={<PrivacyPage />} />
         <Route path="contact" element={<ContactPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   )

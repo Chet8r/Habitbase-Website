@@ -1,33 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="HabitBase is a habit tracker built on 8 levels from Struggling to Flow. Start small, plan your day, and keep each other going with friends in Circle and Cups."
-    />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Safari on iPhone shows a banner linking to the app. -->
+    <meta name="apple-itunes-app" content="app-id=6761305108" />
+
+    <!-- Link previews (iMessage, WhatsApp, Slack, X, LinkedIn). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HabitBase" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="https://www.habitbase.co.uk/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="HabitBase: build habits that actually stick" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Each page's title, description and canonical URL replace this title at build time (scripts/prerender.mjs). -->
     <title>HabitBase</title>
-    <script>
-      (function () {
-        const redirect = window.location.search;
-        if (!redirect.startsWith("?/")) {
-          return;
-        }
-
-        const path = redirect
-          .slice(2)
-          .replace(/~and~/g, "&")
-          .replace(/&/g, "?");
-
-        window.history.replaceState(
-          null,
-          "",
-          window.location.pathname + path + window.location.hash,
-        );
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>
