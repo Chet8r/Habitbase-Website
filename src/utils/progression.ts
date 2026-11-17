@@ -23,10 +23,10 @@ export const LEVEL_COLOR: Record<Level, string> = {
   Consistency:   "#f97316",
   Momentum:      "#3b82f6",
   Habit:         "#22c55e",
-  "Mastery I":   "#94a3b8",
-  "Mastery II":  "#64748b",
-  "Mastery III": "#475569",
-  Flow:          "#7c5cfc",
+  "Mastery I":   "#a78bfa",
+  "Mastery II":  "#8b5cf6",
+  "Mastery III": "#7c3aed",
+  Flow:          "#5b21b6",
 };
 
 export const FREQ_SHORT: Record<number, string> = {

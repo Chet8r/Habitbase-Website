@@ -17,6 +17,10 @@ export function ContactPage() {
           Chet8r@gmail.com
         </a>
       </p>
+
+      <p className="contact-copy contact-note">
+        You can also send a feature request or bug report from inside the app, under Settings → Feedback.
+      </p>
     </main>
   );
 }
